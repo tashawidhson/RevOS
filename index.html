@@ -926,6 +926,16 @@
       if(i >= stackItems.length - 1){ clearInterval(interval); btn.disabled = false; }
     }, 900);
   });
+
+  // Report page height to a parent window (WordPress iframe embed), so the
+  // iframe can auto-resize instead of using a fixed height with a scrollbar.
+  function reportHeight(){
+    const h = document.documentElement.scrollHeight;
+    window.parent.postMessage({ cxFrameHeight: h }, '*');
+  }
+  window.addEventListener('load', reportHeight);
+  window.addEventListener('resize', reportHeight);
+  new ResizeObserver(reportHeight).observe(document.body);
 </script>
 
 </body>
