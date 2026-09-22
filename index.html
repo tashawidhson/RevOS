@@ -43,6 +43,11 @@
   .hero-inner{ position:relative; z-index:2; max-width:760px; padding:78px 0 64px; }
   .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; letter-spacing:1.4px; text-transform:uppercase; color:var(--green); margin-bottom:22px; opacity:0; animation:fadeUp .7s ease forwards; }
   .eyebrow::before{ content:''; width:24px; height:2px; background:var(--green); display:inline-block; }
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:var(--green);
+    background:rgba(137,200,67,.12); border:1px solid rgba(137,200,67,.4); padding:7px 14px; border-radius:20px;
+    margin-bottom:16px; opacity:0; animation:fadeUp .7s ease .04s forwards;
+  }
   .hero h1{ font-size:clamp(30px, 4.6vw, 50px); font-weight:700; line-height:1.12; letter-spacing:-0.5px; margin-bottom:16px; opacity:0; animation:fadeUp .8s ease .1s forwards; }
   .hero h1 em{ font-style:normal; color:var(--green); }
   .hero .sub{ font-size:16.5px; font-weight:500; color:#a9bccb; margin-bottom:18px; opacity:0; animation:fadeUp .8s ease .18s forwards; letter-spacing:.3px; }
@@ -206,6 +211,9 @@
   .roi-flow{ display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-bottom:34px; }
   .roi-flow .rf-step{ font-size:14px; font-weight:700; color:var(--navy-dark); background:var(--green); padding:12px 22px; border-radius:4px; }
   .roi-flow .rf-arrow{ color:var(--green); font-size:18px; }
+  .roi-handoff{ max-width:680px; margin-bottom:20px; }
+  .roi-handoff p{ font-size:13.5px; color:#9aacb8; line-height:1.6; font-style:italic; }
+  .roi-handoff strong{ color:#c7d2db; font-style:normal; }
   .roi-close{ max-width:680px; padding:24px 28px; background:rgba(255,255,255,.05); border-left:3px solid var(--green); border-radius:2px; }
   .roi-close p{ font-size:16px; color:#dfe6ec; line-height:1.6; }
   .roi-close p strong{ color:var(--white); }
@@ -279,13 +287,14 @@
   <div class="hero-pulse"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow">cX RevOS</div>
+    <div class="hero-badge">✓ Connects AI spend to revenue outcomes</div>
     <h1>Stop Managing Revenue By Looking In The <em>Rearview Mirror.</em></h1>
     <div class="sub">Diagnose. Measure. Monitor. Improve.</div>
     <p class="lead">Your CRM can be modern. Your AI Agents can be working. And your revenue system can still underperform — because revenue isn't one funnel, one department or one technology. It's a connected system of people, processes, data, customer moments and decisions.</p>
     <div class="why">cX RevOS diagnoses, measures, monitors and proactively improves that system. Not once. <span>Continuously.</span></div>
     <div class="hero-ctas">
       <a href="https://congruentx.com/contact-us/" target="_blank" rel="noopener" class="btn btn-primary">Diagnose Your Revenue System <span class="btn-arrow">→</span></a>
-      <a href="#cycle" class="btn btn-ghost">See the improvement cycle</a>
+      <a href="#ai-roi" class="btn btn-ghost">See AI cost vs. value <span class="btn-arrow">→</span></a>
     </div>
   </div>
   <div class="ticker-wrap">
@@ -302,6 +311,31 @@
     <p>Most organizations have more dashboards than answers.</p>
     <div class="signal-grid" id="signalGrid"></div>
     <p class="close">RevOS connects those signals and turns them into action — identifying where friction exists, establishing the metrics that matter, monitoring performance, and proactively finding where people, workflows or Active AI Agents can create the next measurable improvement.</p>
+  </div>
+</section>
+
+<!-- AI ROI / CONSUMPTION TIE-IN -->
+<section id="ai-roi" class="roi-shell">
+  <div class="wrap reveal">
+    <div class="kicker">Cost Meets Revenue</div>
+    <h2 class="section-title">Is your AI producing more value than it consumes?</h2>
+    <p style="max-width:680px; color:#c7d2db; font-size:15.5px; margin-top:-4px; margin-bottom:8px;">RevOS connects Agent activity and consumption to the revenue metrics that matter:</p>
+    <div class="roi-metric-row">
+      <span>Conversion</span><span>Velocity</span><span>Retention</span><span>Expansion</span><span>Cost-to-Serve</span><span>Revenue</span>
+    </div>
+    <div class="roi-flow">
+      <div class="rf-step">Agent Consumption</div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-step">Operational Performance</div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-step">Revenue Outcome</div>
+    </div>
+    <div class="roi-handoff">
+      <p>Managing the consumption itself — tokens, compute, licenses — is <strong>AgentOS's</strong> job. RevOS makes sure that spend shows up as a number your board actually cares about, not a line item buried in an IT budget.</p>
+    </div>
+    <div class="roi-close">
+      <p><strong>AI ROI shouldn't be a guess.</strong> RevOS connects the cost of AI to the business value it helps create.</p>
+    </div>
   </div>
 </section>
 
@@ -479,28 +513,6 @@
       <span>Sales qualification</span><span>Meeting preparation</span><span>Deal health</span><span>Opportunity conversion</span>
       <span>Pricing and proposals</span><span>Contract review</span><span>Follow-up</span><span>Churn prevention</span>
       <span>Renewals</span><span>Cross-sell</span><span>Expansion</span><span>Next-best action</span>
-    </div>
-  </div>
-</section>
-
-<!-- AI ROI / CONSUMPTION TIE-IN -->
-<section class="roi-shell">
-  <div class="wrap reveal">
-    <div class="kicker">Cost Meets Revenue</div>
-    <h2 class="section-title">Is your AI producing more value than it consumes?</h2>
-    <p style="max-width:680px; color:#c7d2db; font-size:15.5px; margin-top:-4px; margin-bottom:8px;">RevOS connects Agent activity and consumption to the revenue metrics that matter:</p>
-    <div class="roi-metric-row">
-      <span>Conversion</span><span>Velocity</span><span>Retention</span><span>Expansion</span><span>Cost-to-Serve</span><span>Revenue</span>
-    </div>
-    <div class="roi-flow">
-      <div class="rf-step">Agent Consumption</div>
-      <div class="rf-arrow">→</div>
-      <div class="rf-step">Operational Performance</div>
-      <div class="rf-arrow">→</div>
-      <div class="rf-step">Revenue Outcome</div>
-    </div>
-    <div class="roi-close">
-      <p><strong>AI ROI shouldn't be a guess.</strong> RevOS connects the cost of AI to the business value it helps create.</p>
     </div>
   </div>
 </section>
